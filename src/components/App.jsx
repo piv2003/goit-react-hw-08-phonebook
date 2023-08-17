@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
-import Form from 'components/Form';
+import Form from 'components/LoginForm/index.js';
 import Filter from 'components/Filter';
 import ContactsList from 'components/ContactsList/ContactsList.js';
 import { AppBox, Empty } from 'components/App.styled';
