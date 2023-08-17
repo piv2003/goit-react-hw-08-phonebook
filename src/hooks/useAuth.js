@@ -5,3 +5,5 @@ import {
   selectUser,
   selectIsLoading,
 } from '../redux/auth/selectors';
+
+export const useAuth = () => {};
