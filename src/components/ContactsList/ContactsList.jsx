@@ -1,35 +1,27 @@
-import PropTypes from 'prop-types';
-import ContactListItem from 'components/ContactListItem/ContactListItem';
-import { List } from './ContactsList.styled';
+import ContactItem from '../ContactListItem/ContactListItem';
+import { Item, List, Wrapper } from './ContactList.styled';
+import { useContacts } from '../../hooks/useContacts';
 
-const ContactsList = ({ contacts, filter, onDeleteContact }) => {
+const ContactsList = () => {
+  const { filteredContacts } = useContacts();
+
   return (
-    <List>
-      {contacts
-        .filter(({ name }) => name.toLowerCase().includes(filter.toLowerCase()))
-        .map(({ id, name, number }) => (
-          <ContactListItem
-            key={id}
-            id={id}
-            name={name}
-            number={number}
-            onDeleteContact={onDeleteContact}
-          />
-        ))}
-    </List>
+    <Wrapper>
+      {filteredContacts.length > 0 ? (
+        <>
+          <List>
+            {filteredContacts.map(({ id, name, number }) => (
+              <Item key={id}>
+                <ContactItem id={id} name={name} number={number} />
+              </Item>
+            ))}
+          </List>
+        </>
+      ) : (
+        <b>Contact not found</b>
+      )}
+    </Wrapper>
   );
-};
-
-ContactsList.propTypes = {
-  contacts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-  filter: PropTypes.string.isRequired,
-  onDeleteContact: PropTypes.func.isRequired,
 };
 
 export default ContactsList;
