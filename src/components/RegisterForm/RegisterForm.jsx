@@ -1,10 +1,10 @@
 import { useDispatch } from 'react-redux';
 import { ErrorMessage, Formik } from 'formik';
 import { object, string } from 'yup';
-import { RiLockPasswordFill } from 'react-icons/ri';
+import { RiLockPasswordLine } from 'react-icons/ri';
 import { FaUserAlt } from 'react-icons/fa';
-import { FiMail } from 'react-icons/fi';
-import { register } from 'redux/auth/operations';
+import { TfiEmail } from 'react-icons/tfi';
+import { register } from '../../redux/auth/operations';
 
 import {
   ErrorMessageText,
@@ -41,6 +41,49 @@ const RegisterForm = () => {
   };
 
   return (
+    <Container>
+      <Formik
+        initialValues={initialValues}
+        onSubmit={handleSubmit}
+        validationSchema={userSchema}
+      >
+        <FormBox autoComplete="off">
+          <Title>Registration</Title>
+          <Label>
+            <Text>
+              <FaUserAlt size={20} /> Name
+            </Text>
+            <Input placeholder="Please enter a name" type="text" name="name" />
+            <ErrorMessage component={ErrorMessageText} name="name" />
+          </Label>
+          <Label>
+            <Text>
+              <TfiEmail size={20} />
+              Email
+            </Text>
+            <Input
+              placeholder="Please enter email address"
+              type="text"
+              name="email"
+            />
+            <ErrorMessage component={ErrorMessageText} name="email" />
+          </Label>
+          <Label>
+            <Text>
+              <RiLockPasswordLine size={20} />
+              Password
+            </Text>
+            <Input
+              placeholder="Please enter password"
+              type="password"
+              name="password"
+            />
+            <ErrorMessage component={ErrorMessageText} name="password" />
+          </Label>
+          <SubmitButton type="submit">Sign Up</SubmitButton>
+        </FormBox>
+      </Formik>
+    </Container>
   );
 };
 
