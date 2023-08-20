@@ -28,7 +28,7 @@ export const FormBox = styled(Form)`
       margin-bottom: 5px;
       font-size: 20px;
       font-weight: 700;
-      color: #300128;
+      color: #300101;
       text-shadow: 0 1px 0 #cccccc, 0 2px 0 #f5eeee, 0 3px 0 #bbb,
         0 2px 0 #f7f1f1, 0 2px 0 #ece8e8, 0 2px 1px rgba(0, 0, 0, 0.1);
     }
