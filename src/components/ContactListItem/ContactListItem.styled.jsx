@@ -1,44 +1,95 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import { ImSpinner4 } from 'react-icons/im';
 
-export const Item = styled.li`
-  position: relative;
+export const BtnWrapper = styled.div`
   display: flex;
+  gap: 5px;
+`;
+
+export const UserIcon = styled.div`
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 0.25rem;
-  padding: 0.325rem 0.825rem 0.325rem 1.325rem;
-  color: #fff;
-  border-radius: 10px;
-  background: #f560dc;
+  width: 43px;
+  height: 43px;
+  font-size: 30px;
+  font-weight: 700;
+  background: transparent;
+  color: #000;
+  border: solid 2px #ad0bad;
+  border-radius: 50%;
+`;
 
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 0.5rem;
-    background: #fff;
-  }
+const spin = keyframes`
+0% {
+  transform: rotate(360deg);
+}
+100% {
+  transform: rotate(3turn);
+}
+`;
 
-  & button {
-    margin-left: auto;
-    padding: 5px;
-    border-radius: 5px;
+export const Spinner = styled(ImSpinner4)`
+  animation: ${spin} 0.85s linear infinite;
+`;
+Spinner.defaultProps = {
+  size: 35,
+};
+
+export const ContactInfo = styled.div`
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+`;
+
+export const ButtonChange = styled.button`
+  padding: 5px;
+  border-color: #000000;
+  border-radius: 50%;
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-color: yellow;
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 10px 10px,
-      rgba(0, 0, 0, 0.12) 0px -7px 5px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-      rgba(0, 0, 0, 0.17) 0px 7px 5px, rgba(0, 0, 0, 0.09) 0px -3px 2px;
+  }
+  &:hover svg {
+    fill: #d30aee;
+    cursor: pointer;
+  }
+  & svg {
+    fill: #000000;
+    transition: fill 0.2s ease;
+  }
+`;
+
+export const ButtonDelete = styled.button`
+  padding: 5px;
+  border-color: #000000;
+  border-radius: 50%;
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-color: red;
+    cursor: pointer;
+  }
+  &:hover svg {
+    fill: red;
+    cursor: pointer;
+  }
+  & svg {
+    fill: #000000;
+    transition: fill 0.2s ease;
   }
 `;
 
 export const Name = styled.span`
-  color: #bbff00;
+  color: #9dfa72;
   font-weight: 500;
+  font-size: 20px;
 `;
 
 export const Number = styled.span`
-  color: #550404;
-  font-weight: bold;
-  text-shadow: 0 1px 0 #cccccc;
+  color: #f1fabc;
+  font-weight: 500;
+  font-size: 20px;
 `;
