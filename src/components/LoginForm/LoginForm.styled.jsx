@@ -83,6 +83,7 @@ export const ErrorMessageText = styled.p`
   margin-top: 10px;
   color: red;
   font-size: 17px;
+  text-shadow: 1px 1px #000;
 `;
 
 const clickEffect = keyframes`
@@ -127,6 +128,6 @@ export const SubmitButton = styled.button`
   }
 
   &:active {
-    animation: ${clickEffect} 1.2s;
+    animation: ${clickEffect} 0.8s;
   }
 `;
