@@ -57,14 +57,12 @@ export const Text = styled.span`
   align-items: end;
   justify-content: center;
   margin-bottom: 10px;
-
   font-size: 1.2rem;
 `;
 
 export const Input = styled(Field)`
   width: 100%;
   padding: 10px;
-
   border: none;
   border-radius: 10px;
   font-size: 1.2rem;
@@ -74,6 +72,7 @@ export const Input = styled(Field)`
   &::placeholder {
     font-size: 15px;
   }
+
   &:focus {
     outline: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
@@ -83,9 +82,9 @@ export const Input = styled(Field)`
 export const ErrorMessageText = styled.p`
   text-align: center;
   margin-top: 10px;
-
   color: red;
   font-size: 17px;
+  text-shadow: 1px 1px #000;
 `;
 
 const clickEffect = keyframes`
