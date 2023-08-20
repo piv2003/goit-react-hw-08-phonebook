@@ -6,7 +6,18 @@ import { Nav, Link } from './Navigation.styled';
 const Navigation = () => {
   const { isLoggedIn } = useAuth();
 
-  return (    
+  return (
+    <Nav>
+      <Link to="/">
+        <AiFillHome />
+        Home
+      </Link>
+      {isLoggedIn && (
+        <Link to="/contacts">
+          <GiBookmarklet /> Contacts
+        </Link>
+      )}
+    </Nav>
   );
 };
 
