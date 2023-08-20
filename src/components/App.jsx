@@ -1,7 +1,8 @@
 import { useEffect, lazy } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
-import { useAuth, useLoaders } from '../hooks';
+import { useLoaders } from '../hooks/UseLoaders/useLoaders';
+import { useAuth } from '../hooks';
 import Layout from './Layout/Layout';
 import PrivateRoute from './PrivateRoute';
 import RestrictedRoute from './RestrictedRoute';
@@ -20,6 +21,7 @@ export const App = () => {
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
+
   return isRefreshing ? (
     <LoaderBig />
   ) : (
