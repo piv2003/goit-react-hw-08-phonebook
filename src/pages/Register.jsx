@@ -7,7 +7,15 @@ const Register = () => {
   const { LoaderBig } = useLoaders();
 
   return (
-    );
+    <>
+      <Helmet>
+        <title>Registration</title>
+      </Helmet>
+
+      {isLoading && <LoaderBig />}
+      <RegisterForm />
+    </>
+  );
 };
 
 export default Register;
