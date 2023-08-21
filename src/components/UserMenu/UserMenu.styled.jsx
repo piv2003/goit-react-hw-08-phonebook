@@ -12,7 +12,7 @@ export const UserName = styled.p`
   gap: 10px;
   font-weight: 500;
   font-style: italic;
-  color: #fff;
+  color: #f5f0c6;
 `;
 
 export const Button = styled.button`

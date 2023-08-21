@@ -47,9 +47,11 @@ export const ButtonChange = styled.button`
   border-color: #000000;
   border-radius: 50%;
   transition: border-color 0.2s ease;
+  background: rgba(250, 250, 250, 0.3);
 
   &:hover {
     border-color: yellow;
+    background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
   }
   &:hover svg {
@@ -67,9 +69,11 @@ export const ButtonDelete = styled.button`
   border-color: #000000;
   border-radius: 50%;
   transition: border-color 0.2s ease;
+  background: rgba(250, 250, 250, 0.3);
 
   &:hover {
     border-color: red;
+    background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
   }
   &:hover svg {
