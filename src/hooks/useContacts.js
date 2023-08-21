@@ -4,7 +4,7 @@ import {
   selectError,
   selectIsLoading,
 } from '../redux/contacts/selectors';
-import { filterListContacts } from '../redux/filrer/selectors';
+import { filterListContacts } from '../redux/filter/selectors';
 
 export const useContacts = () => {
   const allContacts = useSelector(selectContacts);
