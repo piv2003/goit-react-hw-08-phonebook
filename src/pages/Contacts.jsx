@@ -7,6 +7,14 @@ const Contacts = () => {
   const { LoaderBig } = useLoaders();
 
   return (
+    <>
+      <Helmet>
+        <title>Contacts</title>
+      </Helmet>
+
+      {isLoading && <LoaderBig />}
+      <ContactsBar />
+    </>
   );
 };
 
