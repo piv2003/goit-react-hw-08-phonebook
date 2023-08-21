@@ -134,7 +134,7 @@ export const ButtonLogIn = styled.button`
   }
 
   &:active {
-    animation: ${clickEffect} 0.7s;
+    animation: ${clickEffect} 0.3s;
   }
 `;
 
