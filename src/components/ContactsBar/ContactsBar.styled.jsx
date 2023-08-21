@@ -13,8 +13,7 @@ export const Wrapper = styled.div`
   text-align: center;
   height: 100vh;
 
-  & h1,
-  h2 {
+  & h1 {
     animation: flicker 0.5s infinite alternate;
     color: #fff;
   }
@@ -44,6 +43,8 @@ export const Title = styled.h1`
 
 export const Text = styled.h2`
   font-size: 30px;
+  color: rgba(3, 63, 42, 0.75);
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3), 0 0 5px #ffd, 0 0 8px #fff;
 `;
 
 export const Empty = styled.p`
