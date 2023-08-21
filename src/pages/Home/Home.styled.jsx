@@ -91,7 +91,7 @@ export const ButtonRegistr = styled.button`
     rgba(0, 0, 0, 0.09) 0px -3px 2px;
   background: radial-gradient(circle, #f1e4e2, #eb27eb);
   background-clip: padding-box;
-  transition: background-image 0.3s, color 0.3s, transform 0.3s;
+  transition: background-image 0.2s, color 0.2s, transform 0.2s;
 
   &:hover {
     background: radial-gradient(circle, #6fd2f0, #eee56d);
@@ -125,7 +125,7 @@ export const ButtonLogIn = styled.button`
     rgba(0, 0, 0, 0.09) 0px -3px 2px;
   background: radial-gradient(circle, #f1c1bc, #a702a7);
   background-clip: padding-box;
-  transition: background-image 0.3s, color 0.3s, transform 0.3s;
+  transition: background-image 0.2s, color 0.2s, transform 0.2s;
 
   &:hover {
     background: radial-gradient(circle, #412eee, #f1edaf);
@@ -134,7 +134,7 @@ export const ButtonLogIn = styled.button`
   }
 
   &:active {
-    animation: ${clickEffect} 1.2s;
+    animation: ${clickEffect} 0.7s.;
   }
 `;
 
