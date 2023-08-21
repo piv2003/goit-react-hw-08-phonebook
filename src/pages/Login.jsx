@@ -7,7 +7,15 @@ const Login = () => {
   const { LoaderBig } = useLoaders();
 
   return (
-    );
+    <>
+      <Helmet>
+        <title>Login</title>
+      </Helmet>
+
+      {isLoading && <LoaderBig />}
+      <LoginForm />
+    </>
+  );
 };
 
 export default Login;
