@@ -29,6 +29,15 @@ const ContactsBar = () => {
     return allContacts.some(contact => contact.number === newNumber);
   };
 
+  useEffect(() => {
+    if (isAnimationActive) {
+      const timer = setTimeout(() => {
+        setIsAnimationActive(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [isAnimationActive]);
+
   const onSubmit = (name, number) => {
     if (checkСontact(number)) {
       return notifiesAlert(number, name);
@@ -41,15 +50,6 @@ const ContactsBar = () => {
       setIsAnimationActive(false);
     }, 3000);
   };
-
-  useEffect(() => {
-    if (isAnimationActive) {
-      const timer = setTimeout(() => {
-        setIsAnimationActive(false);
-      }, 3000);
-      return () => clearTimeout(timer);
-    }
-  }, [isAnimationActive]);
 
   return (
     <Wrapper
