@@ -18,7 +18,7 @@ const ContactsList = () => {
           </List>
         </>
       ) : (
-        <b>Contact not found</b>
+        <b>Contacts not found</b>
       )}
     </Wrapper>
   );
