@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { addContact, fetchContacts } from '../../redux/contacts/operations';
 import { useContacts } from '../../hooks';
@@ -13,6 +13,7 @@ const ContactsBar = () => {
   const dispatch = useDispatch();
   const { allContacts, isLoading, error } = useContacts();
   const { LoaderBig } = useLoaders();
+  const [isAnimationActive, setIsAnimationActive] = useState(false);
 
   useEffect(() => {
     dispatch(fetchContacts());
@@ -35,10 +36,26 @@ const ContactsBar = () => {
 
     dispatch(addContact({ name, number }));
     successNotification(`Contact ${name} added successfully`);
+    setIsAnimationActive(true);
+    setTimeout(() => {
+      setIsAnimationActive(false);
+    }, 3000);
   };
 
+  useEffect(() => {
+    if (isAnimationActive) {
+      const timer = setTimeout(() => {
+        setIsAnimationActive(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [isAnimationActive]);
+
   return (
-    <Wrapper isHeight={allContacts.length > 0}>
+    <Wrapper
+      className={isAnimationActive ? 'rotate-animation' : ''}
+      isHeight={allContacts.length > 0}
+    >
       <Title>Phonebook</Title>
       <ContactsForm onSubmit={onSubmit} />
 

@@ -35,15 +35,30 @@ export const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
   }
+  
   img {
   max-width: 100%;
   display: block;
 }
+
   input,
   button,
   textarea,
   select {
     font: inherit;
   }
+
+  @keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-animation {
+  animation: rotateAnimation 3s linear infinite;
+}
 `;
 export default GlobalStyle;
