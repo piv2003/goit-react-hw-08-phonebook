@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet';
-import RegisterForm from '../components/RegisterForm/RegisterForm';
-import { useAuth, useLoaders } from '../hooks';
+import RegisterForm from '../../components/RegisterForm/RegisterForm';
+import { useAuth, useLoaders } from '../../hooks';
 
 const Register = () => {
   const { isLoading } = useAuth();

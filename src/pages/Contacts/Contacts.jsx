@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet';
-import ContactsBar from '../components/ContactsBar/ContactsBar';
-import { useAuth, useLoaders } from '../hooks';
+import ContactsBar from '../../components/ContactsBar/ContactsBar';
+import { useAuth, useLoaders } from '../../hooks';
 
 const Contacts = () => {
   const { isLoading } = useAuth();
