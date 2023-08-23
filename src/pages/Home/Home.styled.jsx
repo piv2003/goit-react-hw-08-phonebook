@@ -39,8 +39,7 @@ export const Container = styled.div`
     margin: 0 auto;
     font-family: "Roboto Slab";
     font-weight: 700;
-    font-size: 40px;
-    /* text-shadow: 1px 1px 1px #f5dddd; */
+    font-size: 40px;    
     background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #d3eb6b 75%, #e05252 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
