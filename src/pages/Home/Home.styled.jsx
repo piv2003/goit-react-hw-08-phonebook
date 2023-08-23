@@ -37,31 +37,19 @@ export const Container = styled.div`
   & span {
     display: table;
     margin: 0 auto;
-    font-family: "Roboto Slab";
+    font-family: 'Roboto Slab';
     font-weight: 700;
-    font-size: 40px;    
-    background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #d3eb6b 75%, #e05252 100%);
+    font-size: 40px;
+    background: linear-gradient(
+      330deg,
+      #e05252 0%,
+      #99e052 25%,
+      #52e0e0 50%,
+      #d3eb6b 75%,
+      #e05252 100%
+    );
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    
-  }
-  /* @keyframes flicker {
-    0%,
-    18%,
-    22%,
-    25%,
-    53%,
-    57% {
-      text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa,
-        0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
-    }
-    10%,
-    20%,
-    24%,
-    35%,
-    55% {
-      text-shadow: none;
-    } */
+    -webkit-text-fill-color: transparent;
   }
 `;
 
