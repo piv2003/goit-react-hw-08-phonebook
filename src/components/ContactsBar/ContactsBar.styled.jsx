@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
   height: 100vh;
 
   & h1 {
-    animation: flicker 0.5s infinite alternate;
+    animation: flicker 5.3s infinite alternate;
     color: #fff;
   }
   @keyframes flicker {
